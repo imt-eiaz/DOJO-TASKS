@@ -1,4 +1,4 @@
-import { Flex, Heading, Box, Text, Button, Spacer, HStack, useToast, Avatar } from "@chakra-ui/react"
+import { Flex, Heading, Box, Text, Button, Spacer, HStack, useToast, Avatar, AvatarBadge } from "@chakra-ui/react"
 
 export default function Navbar() {
 
@@ -19,7 +19,11 @@ export default function Navbar() {
       <Spacer />
 
       <HStack spacing="20px"> 
-        <Avatar name = 'mario' src="/img/mario.png" />
+        <Avatar  /*name = 'mario' bg="purple.400" color='white'*/ src="/img/mario.png" >
+        <AvatarBadge width='1.3em' bg='red.500'>
+          <Text fontSize='xs' color='white'>3</Text>
+        </AvatarBadge>
+        </Avatar>
         <Text>mario@netninja.dev</Text>
         <Button colorScheme="purple" onClick={showToast}>Logout</Button>
       </HStack>
